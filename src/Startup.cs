@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ems.services.contract;
+using ems.services.implementation;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -24,6 +26,7 @@ namespace src
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddSingleton(typeof(IEmployeeService),typeof(EmployeeService));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
