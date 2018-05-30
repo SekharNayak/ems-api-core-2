@@ -1,10 +1,9 @@
-using System.Collections.Generic;
 using System.Threading.Tasks;
-using ems.models;
 using ems.services.contract;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ems.controller{
+namespace ems.controller
+{
 
     [Route("api/employees")]
     public class EmployeeController :Controller
